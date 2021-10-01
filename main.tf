@@ -58,12 +58,12 @@ resource "aws_route_table" "private"{
 	vpc_id = aws_vpc.default.id
 }
 
-/*resource "aws_route" "private" {
+resource "aws_route" "private" {
   	count = length(var.private_subnet_cidr_blocks)
 
   	route_table_id         = aws_route_table.private[count.index].id
   	destination_cidr_block = "0.0.0.0/0"
-}*/
+}
 
 
 #Public Route Table and Association
